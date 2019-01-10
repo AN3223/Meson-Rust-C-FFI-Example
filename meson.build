@@ -13,7 +13,17 @@ else
     grab_objects_arg = 'debug'
 endif
 
-run_command(cargo_build, cargo_args)
+message('Running cargo...')
+cargo_result = run_command(cargo_build, cargo_args)
+cargo_stdout = cargo_result.stdout().strip()
+cargo_stderr = cargo_result.stderr().strip()
+if cargo_stderr != ''
+    message(cargo_stderr)
+elif cargo_stdout != ''
+    message(cargo_stdout)
+else
+    message('Cargo is done')
+endif
 
 # Here we grab any shared library objects from Cargo's generated "target" directory
 # using a shell script to take advantage of wildcards.
