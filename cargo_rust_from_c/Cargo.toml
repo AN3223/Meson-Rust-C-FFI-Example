@@ -1,0 +1,11 @@
+[package]
+name = "cargo_rslib"
+version = "0.1.0"
+
+[dependencies]
+libc = "*"
+
+[lib]
+name = "cargo_rslib"
+path = "lib.rs"
+crate-type = ["dylib"]

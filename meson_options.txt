@@ -1,0 +1,6 @@
+option(
+    'release',
+    type : 'boolean',
+    value : false,
+    description : 'Controls whether cargo is called with the --release flag or not. Defaults to false.'
+)
