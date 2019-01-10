@@ -2,6 +2,7 @@
 
 echo "test.sh: Running Meson..."
 meson build-debug -D release=false
+echo ""
 meson build-release -D release=true
 # The -D argument is how options are passed to Meson
 
@@ -16,6 +17,7 @@ echo "rsexe:"
 ./rsexe
 
 
+echo ""
 cd ..
 
 
@@ -29,6 +31,7 @@ echo "rsexe:"
 ./rsexe
 
 
+echo ""
 cd ..
 
 
