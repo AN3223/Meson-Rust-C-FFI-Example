@@ -3,7 +3,7 @@ name = "cargo_rslib"
 version = "0.1.0"
 
 [dependencies]
-libc = "*"
+libc = "0.2"
 
 [lib]
 name = "cargo_rslib"
